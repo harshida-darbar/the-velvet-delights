@@ -2,19 +2,16 @@ import React from "react";
 
 function Section1() {
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center gap-12 px-6 sm:px-8 lg:px-12 py-16 bg-[#fdf1f0] overflow-hidden">
-      <div className="relative bg-[#E43F99] rounded-xl w-full sm:w-[36%] h-64 flex items-center justify-start shadow-lg px-6 py-6 overflow-visible">
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-10 px-6 sm:px-8 lg:px-20 lg:gap-25  py-16 bg-[#fdf1f0] overflow-hidden">
+      <div className="relative bg-[#E43F99] rounded-xl w-full sm:w-[48%] h-64 flex items-center justify-start shadow-lg px-6 py-6 lg:w-[500px]  overflow-visible">
         <div className="text-left z-10 w-full sm:w-[60%]">
-          <h2 className="text-[#FFFFFF] text-lg sm:text-xl font-bold mb-2 break-words">
+          <h2 className="text-white text-lg sm:text-xl font-bold mb-2 break-words">
             Food you love,<br />
             delivered to you
           </h2>
-          <p
-            className="text-gray-100 text-xs sm:text-sm leading-relaxed mb-4 break-words
-              pr-16 sm:pr-0 max-w-full sm:max-w-xs"
-          >
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
+          <p className="text-gray-100 text-xs sm:text-sm leading-relaxed mb-4 break-words">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            Velit officia consequat duis enim velit mollit.
           </p>
           <button className="bg-white text-[#E43F99] rounded-full w-[130px] sm:w-[150px] h-10 cursor-pointer">
             Order Now
@@ -27,18 +24,15 @@ function Section1() {
         />
       </div>
 
-      <div className="relative bg-[#E43F99] rounded-xl w-full sm:w-[36%] h-64 flex items-center justify-start shadow-lg px-6 py-6 overflow-visible mr-0 sm:mr-24">
+      <div className="relative bg-[#E43F99] rounded-xl w-full sm:w-[48%] h-64 flex items-center justify-start shadow-lg px-6 py-6 lg:w-[500px] lg:mr-5 overflow-visible">
         <div className="text-left z-10 w-full sm:w-[60%]">
-          <h2 className="text-[#FFFFFF] text-lg sm:text-xl font-bold mb-2 break-words">
+          <h2 className="text-white text-lg sm:text-xl font-bold mb-2 break-words">
             Have you tried our<br />
             delicious new cake?
           </h2>
-          <p
-            className="text-gray-100 text-xs sm:text-sm leading-relaxed mb-4 break-words
-              pr-16 sm:pr-0 max-w-full sm:max-w-xs"
-          >
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
+          <p className="text-gray-100 text-xs sm:text-sm leading-relaxed mb-4 break-words">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            Velit officia consequat duis enim velit mollit.
           </p>
           <button className="bg-white text-[#E43F99] rounded-full w-[130px] sm:w-[150px] h-10 cursor-pointer">
             Order Now

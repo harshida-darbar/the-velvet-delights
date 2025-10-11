@@ -1,17 +1,24 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './Components/Header'
 import Home from './Pages/Home'
-import Footer from './Components/Footer'
-
+import Login from './Pages/Login';
+import SignUp from './Pages/SignUp'
+import Profile from './Pages/Profile'
+import Contact from './Pages/Contact';
+import Products from './Pages/Products';
+import ProductDetails from './Pages/ProductDetails';
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+         <Route path="/login" element={<Login />} />
+         <Route path="/signup" element={<SignUp />} />
+         <Route path="/profile" element={<Profile />} />
+         <Route path="/contact" element={<Contact />} />
+         <Route path="/products" element={<Products />} />
+         <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
-      <Footer/>
     </BrowserRouter>
   )
 }

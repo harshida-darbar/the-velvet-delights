@@ -6,7 +6,7 @@ import { IoMdTime } from "react-icons/io";
 function Section2() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between p-6 sm:p-10 bg-[#fdf1f0]">
-      <div className="w-full md:w-1/2 p-3 space-y-6 text-center md:text-left">
+      <div className="w-full md:w-1/2 p-3 space-y-6 text-center md:text-left lg:ml-10">
         <h1 className="text-4xl text-[#D9077A] font-bold">
           We Deliver Anywhere
         </h1>
@@ -50,7 +50,7 @@ function Section2() {
         <img
           src="src/assets/images/sec_cake.png"
           alt="The Velvet Delights"
-          className="w-full sm:w-4/5 md:w-[50%] lg:w-[80%] h-auto object-contain"
+          className="w-full sm:w-4/5 md:w-[50%] lg:w-[80%] lg:ml-13 h-auto object-contain"
         />
       </div>
     </div>
