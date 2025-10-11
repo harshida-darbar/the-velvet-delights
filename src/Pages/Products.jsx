@@ -26,14 +26,12 @@ const Products = () => {
     } else {
       data.wishlist[item.id] = item;
     }
-
     localStorage.setItem("the-velvet-delights", JSON.stringify(data));
     setWishlist(Object.values(data.wishlist));
   };
 
   const handleCartAction = (item) => {
     const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
-
     if (data.cart[item.id]) {
       navigate("/cart");
     } else {
@@ -72,6 +70,38 @@ const Products = () => {
       price: "$10",
       desc: "Mix of sweet and savory bites.",
       image: "https://i.pinimg.com/736x/e6/e1/53/e6e153b4ae03df9720d7e089a5ec8a23.jpg",
+    },
+    {
+      id: "5",
+      name: "Velvet Chocolate Cake",
+      price: "$10",
+      desc: "Rich dark and red velvet chocolate layered cake.",
+      image:
+        "https://images.pexels.com/photos/12927075/pexels-photo-12927075.jpeg",
+    },
+    {
+      id: "6",
+      name: "Strawberry Donut Box",
+      price: "$40",
+      desc: "Strawberry Sweet glazed mini donuts",
+      image:
+        "https://images.pexels.com/photos/7474225/pexels-photo-7474225.jpeg",
+    },
+    {
+      id: "7",
+      name: "Chocolate Strawberry Layered Cake",
+      price: "$60",
+      desc: "Rich dark chocolate layered cake.",
+      image:
+        "https://images.pexels.com/photos/18613267/pexels-photo-18613267.jpeg",
+    },
+    {
+      id: "8",
+      name: "Cherry Cake",
+      price: "$80",
+      desc: "Dark cherry,chocolate layered cake.",
+      image:
+        "https://images.pexels.com/photos/4959705/pexels-photo-4959705.jpeg",
     },
   ];
 
@@ -159,5 +189,4 @@ const Products = () => {
     </div>
   );
 };
-
 export default Products;

@@ -2,23 +2,26 @@ import React, { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function Feedback() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Feedback submitted:", formData);
     toast.success("Thank you for your feedback!");
     setFormData({ name: "", email: "", message: "" });
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   };
 
   return (
@@ -32,11 +35,10 @@ export default function Feedback() {
           <p className="text-gray-600 text-center mb-8">
             Let us know how we can improve your experience!
           </p>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Name
-              </label>
+              <label className="block text-gray-700 font-medium mb-2">Name</label>
               <input
                 type="text"
                 name="name"
@@ -46,10 +48,9 @@ export default function Feedback() {
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D9526B] transition"
               />
             </div>
+
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Email
-              </label>
+              <label className="block text-gray-700 font-medium mb-2">Email</label>
               <input
                 type="email"
                 name="email"
@@ -59,19 +60,30 @@ export default function Feedback() {
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D9526B] transition"
               />
             </div>
+
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Message
-              </label>
+              <label className="block text-gray-700 font-medium mb-2">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
                 rows="5"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    e.currentTarget.form.dispatchEvent(
+                      new Event("submit", { cancelable: true, bubbles: true })
+                    );
+                  }
+                }}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D9526B] transition resize-none"
-              ></textarea>
+              />
+              <p className="text-xs text-gray-400 mt-1">
+                Press <strong>Enter</strong> to submit or <strong>Shift + Enter</strong> for a new line
+              </p>
             </div>
+
             <button
               type="submit"
               className="w-full bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white font-medium rounded-full px-6 py-3 hover:opacity-90 transition"

@@ -12,6 +12,7 @@ import Cart from './Pages/Cart';
 import Wishlist from './Pages/WishList';
 import About from './Pages/About';
 import Feedback from './Pages/Feedback';
+import Orders from './Pages/Orders';
 
 export default function App() {
   return (
@@ -28,7 +29,7 @@ export default function App() {
          <Route path="/product/:id" element={<ProductDetails />} />
          <Route path="/cart" element={<Cart />} />
          <Route path="/wishlist" element={<Wishlist />} />
-         
+         <Route path="/orders" element={<Orders />} />
       </Routes>
        <ToastContainer position="top-center" autoClose={1500} />
     </BrowserRouter>
