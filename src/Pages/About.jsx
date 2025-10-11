@@ -25,7 +25,8 @@ function About() {
           <img
             src={aboutImage}
             alt="About Us"
-            className="w-full sm:w-4/5 md:w-3/4 lg:w-full object-contain rounded-xl shadow-xl"
+            className="w-full sm:w-4/5 md:w-3/4 object-contain 
+            lg:w-[500px] lg:h-[450px] rounded-xl shadow-xl"
           />
         </div>
       </div>
@@ -85,15 +86,9 @@ function About() {
               alt="Team member"
               className="w-40 rounded-xl shadow-lg"
             />
-            {/* <img
-              src="/src/assets/images/user4.png"
-              alt="Team member"
-              className="w-40 rounded-xl shadow-lg"
-            /> */}
           </div>
         </div>
       </div>
-
       <div className="bg-[#D9526B] py-16 px-6 sm:px-10 lg:px-20 text-center rounded-t-3xl">
         <h2 className="text-3xl sm:text-4xl text-white font-bold mb-4">
           Ready to Taste Happiness?
