@@ -1,18 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetails = () => {
-  const { state } = useLocation();
+  const { state: product } = useLocation();
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
+  const [cart, setCart] = useState([]);
 
-  if (!state) {
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
+    setCart(Object.values(data.cart || {}));
+  }, []);
+
+  if (!product) {
     return <div className="text-center mt-20 text-red-500">No product found!</div>;
   }
 
-  const { image, name, desc, price } = state;
+  const { image, name, desc, price, id } = product;
+  const isInCart = cart.some((i) => i.id === id);
+
+  const handleCartAction = () => {
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
+
+    if (data.cart[id]) {
+      navigate("/cart");
+    } else {
+      data.cart[id] = { ...product, quantity };
+      localStorage.setItem("the-velvet-delights", JSON.stringify(data));
+      setCart(Object.values(data.cart));
+      toast.success("Added to Cart!");
+    }
+  };
 
   return (
     <div>
@@ -31,7 +53,6 @@ const ProductDetails = () => {
           <p className="text-gray-700 text-sm sm:text-base mb-4">{desc}</p>
           <p className="text-xl font-semibold text-gray-900 mb-6">{price}</p>
 
-          {/* ➕➖ Counter */}
           <div className="flex items-center mb-6">
             <button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -50,8 +71,11 @@ const ProductDetails = () => {
             </button>
           </div>
 
-          <button className="w-full bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer py-3 rounded-full font-medium hover:opacity-90 transition mb-4">
-            Add to Cart
+          <button
+            onClick={handleCartAction}
+            className="w-full bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer py-3 rounded-full font-medium hover:opacity-90 transition mb-4"
+          >
+            {isInCart ? "Go to Cart" : "Add to Cart"}
           </button>
 
           <button
@@ -66,5 +90,4 @@ const ProductDetails = () => {
     </div>
   );
 };
-
 export default ProductDetails;

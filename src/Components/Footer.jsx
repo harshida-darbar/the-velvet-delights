@@ -5,8 +5,6 @@ function Footer() {
   return (
     <footer className='bg-white'>
       <div className='max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-16 px-6 sm:px-10 lg:px-16'>
-        
-        {/* Logo Section */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
           <img
             src="/logo.png"
@@ -16,7 +14,6 @@ function Footer() {
           <h1 className='text-[#E53894] font-bold text-2xl'>The Velvet Delights</h1>
         </div>
 
-        {/* Quick Links */}
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left lg:ml-20" >
           <h1 className='text-[#E53894] text-2xl mb-4'>Quick Links</h1>
           <ul className='flex flex-col gap-2 text-gray-700 font-medium'>
@@ -28,11 +25,6 @@ function Footer() {
             <li>
               <Link to="/products" className="text-gray-700 hover:text-[#c13f5e] font-medium transition">
                 Products
-              </Link>
-            </li>
-            <li>
-              <Link to="/menu" className="text-gray-700 hover:text-[#c13f5e] font-medium transition">
-                Menu
               </Link>
             </li>
             <li>
@@ -48,7 +40,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Stay in Touch */}
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left lg:ml-20">
           <h1 className='text-[#E53894] text-2xl mb-4'>Stay In Touch</h1>
           <ul className='flex flex-col gap-2 text-gray-700 font-medium'>
@@ -58,7 +49,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Shops */}
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left lg:ml-20">
           <h1 className='text-[#E53894] text-2xl mb-4'>Shops</h1>
           <ul className='flex flex-col gap-2 text-gray-700 font-medium'>
@@ -69,10 +59,8 @@ function Footer() {
         </div>
       </div>
 
-      {/* Divider */}
       <div className='border-t border-gray-300'></div>
 
-      {/* Bottom Section */}
       <div className='flex flex-col md:flex-row justify-between items-center py-6 px-6 sm:px-10 lg:px-16 gap-4 lg:ml-10'>
         <p className='text-gray-700 font-medium'>
           &copy; 2025 thevelvetdelights.com
