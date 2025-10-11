@@ -17,11 +17,11 @@ function Section2() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center md:items-start justify-center md:justify-start">
           <button className="relative bg-white text-black rounded-full w-[150px] h-10 bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] hover:opacity-90 transition">
-            <span className="block h-full bg-white rounded-full text-center leading-10">
+            <span className="block h-full bg-white rounded-full text-center cursor-pointer leading-10">
               Contact Us
             </span>
           </button>
-          <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-black font-medium rounded-full h-10 w-[150px] hover:opacity-90 transition border border-white">
+          <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-black cursor-pointer font-medium rounded-full h-10 w-[150px] hover:opacity-90 transition border border-white">
             View Menu
           </button>
         </div>

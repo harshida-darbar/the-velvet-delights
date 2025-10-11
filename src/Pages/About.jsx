@@ -17,7 +17,7 @@ function About() {
             From heavenly cakes to delightful snacks, our mission is to make
             every moment sweeter and memorable.
           </p>
-          <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white font-medium py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition">
+          <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer font-medium py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition">
             Explore Our Story
           </button>
         </div>
@@ -96,7 +96,7 @@ function About() {
         <p className="text-white mb-6 max-w-xl mx-auto">
           Explore our menu and discover delightful treats crafted just for you!
         </p>
-        <button className="bg-white text-[#D9526B] font-medium py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition">
+        <button className="bg-white text-[#D9526B] font-medium py-3 px-8 rounded-full cursor-pointer shadow-lg hover:opacity-90 transition">
           Explore Menu
         </button>
       </div>

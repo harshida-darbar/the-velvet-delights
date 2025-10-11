@@ -48,7 +48,7 @@ function Login() {
                 type={field}
                 name={field}
                 placeholder={`Enter your ${field}`}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D9077A]"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D9077A] outline-none"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values[field]}

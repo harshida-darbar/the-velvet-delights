@@ -10,7 +10,6 @@ function Section5() {
     <img src="src/assets/images/user1.png " alt="User 1" className="w-[200px] lg:mt-5" />
     <img src="src/assets/images/user2.png" alt="User 2" className="w-[200px] lg:mt-5" />
     <img src="src/assets/images/user3.png" alt="User 3" className="w-[200px] lg:mt-5" />
-    <img src="src/assets/images/user4.png" alt="User 4" className="w-[200px] lg:mt-5" />
   </div>
 </div>
   )

@@ -15,7 +15,7 @@ function Home() {
     <div className="flex flex-col sm:flex-row items-center justify-between gap-12 px-6 sm:px-8 lg:px-12 py-16 bg-[#fdf1f0] lg:mt-16 overflow-hidden">
       <div className="w-full sm:w-[48%] space-y-6 text-center sm:text-left lg:ml-8">
         <h1 className="text-[#D9077A] text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
-          Food You Love,<br />
+          Desert You Love,<br />
           delivered to you
         </h1>
         <p className="text-[#F2A007] text-base sm:text-lg md:text-lg leading-relaxed max-w-full md:max-w-md mx-auto sm:mx-0">
@@ -25,18 +25,18 @@ function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-5 mt-8">
-          <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white font-medium py-3 px-8 rounded-full w-[200px] shadow-md hover:shadow-lg transition">
+          <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer font-medium py-3 px-8 rounded-full w-[200px] shadow-md hover:shadow-lg transition">
             Explore Menu
           </button>
 
           <div className="flex items-center gap-2 cursor-pointer border border-white rounded-full w-[200px] px-5 py-2">
             <MdOutlineSlowMotionVideo size={30} className="text-[#D9526B]" />
-            <p className="text-gray-800 text-lg font-medium">Watch Video</p>
+            <p className="text-gray-800 text-lg font-medium cursor-pointer">Watch Video</p>
           </div>
         </div>
       </div>
 
-      <div className="relative w-full sm:w-[48%] flex justify-center mt-8 sm:mt-0">
+      <div className="relative w-full sm:w-[48%] flex justify-center mt-5 sm:mt-0">
         <img
           src="src/assets/images/cake.png"
           alt="The Velvet Delights"

@@ -24,7 +24,7 @@ export default function Feedback() {
   return (
     <>
       <Header />
-      <div className="bg-[#FAF9EE] min-h-screen flex items-center justify-center py-20 px-4">
+      <div className="bg-[#fdf1f0] min-h-screen flex items-center justify-center py-20 px-4">
         <div className="bg-white rounded-2xl shadow-lg max-w-2xl w-full p-8 md:p-12">
           <h2 className="text-3xl font-bold text-[#D9526B] mb-6 text-center">
             We Value Your Feedback

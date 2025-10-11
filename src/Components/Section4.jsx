@@ -19,10 +19,10 @@ function Section4() {
               veniam consequat nostrud amet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 items-center md:items-start justify-center md:justify-start">
-              <button className="bg-white text-black font-medium rounded-full h-10 w-[150px] cursor-pointer transition">
+              <button className="bg-white text-black font-medium rounded-full  h-10 w-[150px] cursor-pointer transition">
                 Order Now
               </button>
-              <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-black font-medium rounded-full h-10 w-[150px] hover:opacity-90 transition border border-white">
+              <button className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-black cursor-pointer font-medium rounded-full h-10 w-[150px] hover:opacity-90 transition border border-white">
                 Contact Us
               </button>
             </div>
