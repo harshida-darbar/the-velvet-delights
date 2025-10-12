@@ -11,9 +11,9 @@ function Section2() {
           We Deliver Anywhere
         </h1>
         <p className="text-[#626262] font-semibold leading-relaxed max-w-md mx-auto md:mx-0 text-center md:text-left">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-          Velit officia consequat duis enim velit mollit. Exercitation veniam
-          consequat nostrud amet.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit. Exercitation
+          veniam consequat nostrud amet.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center md:items-start justify-center md:justify-start">
           <button className="relative bg-white text-black rounded-full w-[150px] h-10 bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] hover:opacity-90 transition">

@@ -13,13 +13,19 @@ const Products = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      wishlist: {},
+      cart: {},
+    };
     setWishlist(Object.values(data.wishlist || {}));
     setCart(Object.values(data.cart || {}));
   }, []);
 
   const handleWishlistToggle = (item) => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      wishlist: {},
+      cart: {},
+    };
 
     if (data.wishlist[item.id]) {
       delete data.wishlist[item.id];
@@ -31,7 +37,10 @@ const Products = () => {
   };
 
   const handleCartAction = (item) => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      wishlist: {},
+      cart: {},
+    };
     if (data.cart[item.id]) {
       navigate("/cart");
     } else {
@@ -48,28 +57,32 @@ const Products = () => {
       name: "Chocolate Delight",
       price: "$15",
       desc: "Rich dark chocolate layered cake.",
-      image: "https://crumbsandcaramel.com/wp-content/uploads/2020/10/WS-Skull-Cake-Hero-Blog.jpg",
+      image:
+        "https://crumbsandcaramel.com/wp-content/uploads/2020/10/WS-Skull-Cake-Hero-Blog.jpg",
     },
     {
       id: 2,
       name: "Strawberry Bliss",
       price: "$12",
       desc: "Soft sponge with fresh strawberries.",
-      image: "https://i0.wp.com/www.thelittleblogofvegan.com/wp-content/uploads/2022/07/vegan_strawberry_Cake.jpg?fit=1300%2C1789&ssl=1",
+      image:
+        "https://i0.wp.com/www.thelittleblogofvegan.com/wp-content/uploads/2022/07/vegan_strawberry_Cake.jpg?fit=1300%2C1789&ssl=1",
     },
     {
       id: 3,
       name: "Donut Treats",
       price: "$8",
       desc: "Sweet glazed mini donuts.",
-      image: "https://www.chocolatecoveredcompany.com/cdn/shop/products/DBDNULT12.jpg?v=1729612725",
+      image:
+        "https://www.chocolatecoveredcompany.com/cdn/shop/products/DBDNULT12.jpg?v=1729612725",
     },
     {
       id: 4,
       name: "Snack Box",
       price: "$10",
       desc: "Mix of sweet and savory bites.",
-      image: "https://i.pinimg.com/736x/e6/e1/53/e6e153b4ae03df9720d7e089a5ec8a23.jpg",
+      image:
+        "https://i.pinimg.com/736x/e6/e1/53/e6e153b4ae03df9720d7e089a5ec8a23.jpg",
     },
     {
       id: "5",
@@ -125,13 +138,13 @@ const Products = () => {
         <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products
             .filter((item) => {
-            const query = search.toLowerCase();
-            return (
-              item.name.toLowerCase().includes(query) ||
-              item.desc.toLowerCase().includes(query) ||
-              item.price.toLowerCase().includes(query)
-            );
-          })
+              const query = search.toLowerCase();
+              return (
+                item.name.toLowerCase().includes(query) ||
+                item.desc.toLowerCase().includes(query) ||
+                item.price.toLowerCase().includes(query)
+              );
+            })
             .map((item) => {
               const isInWishlist = wishlist.some((i) => i.id === item.id);
               const isInCart = cart.some((i) => i.id === item.id);
@@ -139,7 +152,9 @@ const Products = () => {
               return (
                 <div
                   key={item.id}
-                  onClick={() => navigate(`/product/${item.id}`, { state: item })}
+                  onClick={() =>
+                    navigate(`/product/${item.id}`, { state: item })
+                  }
                   className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col justify-between cursor-pointer"
                 >
                   <div className="relative">

@@ -14,9 +14,9 @@ function Section4() {
               Our Food Gallery
             </h2>
             <p className="text-white mt-3 leading-relaxed max-w-md lg:text-xl">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-              sint. Velit officia consequat duis enim velit mollit. Exercitation
-              veniam consequat nostrud amet.
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat nostrud amet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 items-center md:items-start justify-center md:justify-start">
               <button className="bg-white text-black font-medium rounded-full  h-10 w-[150px] cursor-pointer transition">

@@ -9,7 +9,7 @@ function Orders() {
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {};
-    const savedOrders = Object.values(data.orders || {}); // assuming you save orders in localStorage
+    const savedOrders = Object.values(data.orders || {});
     setOrders(savedOrders);
   }, []);
 

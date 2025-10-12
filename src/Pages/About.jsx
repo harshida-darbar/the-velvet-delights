@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import aboutImage from "../assets/images/about_hero.jpg"; 
+import aboutImage from "../assets/images/about_hero.jpg";
 
 function About() {
   return (
@@ -37,24 +37,38 @@ function About() {
             Our Mission & Vision
           </h2>
           <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
-            We believe in creating delightful experiences with the perfect blend of
-            taste, quality, and care. Every product is handmade with attention
-            to detail and a sprinkle of joy.
+            We believe in creating delightful experiences with the perfect blend
+            of taste, quality, and care. Every product is handmade with
+            attention to detail and a sprinkle of joy.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto text-center">
           <div className="bg-white rounded-xl shadow-lg p-8 hover:scale-105 transition">
-            <h3 className="text-[#D9526B] text-xl font-bold mb-2">Quality Ingredients</h3>
-            <p className="text-gray-700">Only the finest ingredients go into our products, ensuring freshness and taste.</p>
+            <h3 className="text-[#D9526B] text-xl font-bold mb-2">
+              Quality Ingredients
+            </h3>
+            <p className="text-gray-700">
+              Only the finest ingredients go into our products, ensuring
+              freshness and taste.
+            </p>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-8 hover:scale-105 transition">
-            <h3 className="text-[#D9526B] text-xl font-bold mb-2">Creative Recipes</h3>
-            <p className="text-gray-700">Innovative flavors and unique creations that delight every palate.</p>
+            <h3 className="text-[#D9526B] text-xl font-bold mb-2">
+              Creative Recipes
+            </h3>
+            <p className="text-gray-700">
+              Innovative flavors and unique creations that delight every palate.
+            </p>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-8 hover:scale-105 transition">
-            <h3 className="text-[#D9526B] text-xl font-bold mb-2">Customer Happiness</h3>
-            <p className="text-gray-700">Our ultimate goal is to bring smiles and unforgettable moments to our customers.</p>
+            <h3 className="text-[#D9526B] text-xl font-bold mb-2">
+              Customer Happiness
+            </h3>
+            <p className="text-gray-700">
+              Our ultimate goal is to bring smiles and unforgettable moments to
+              our customers.
+            </p>
           </div>
         </div>
       </div>
@@ -62,12 +76,15 @@ function About() {
       <div className="bg-[#fdf1f0] py-20 px-6 sm:px-10 lg:px-20">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 space-y-6">
-            <h2 className="text-3xl sm:text-4xl text-[#D9077A] font-bold">Our Story</h2>
+            <h2 className="text-3xl sm:text-4xl text-[#D9077A] font-bold">
+              Our Story
+            </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Founded in 2020, The Velvet Delights started with a dream to create
-              sweets and treats that not only taste amazing but also create memories.
-              Our journey has been filled with passion, creativity, and love for
-              desserts. Today, we are proud to serve our customers with joy in every bite.
+              Founded in 2020, The Velvet Delights started with a dream to
+              create sweets and treats that not only taste amazing but also
+              create memories. Our journey has been filled with passion,
+              creativity, and love for desserts. Today, we are proud to serve
+              our customers with joy in every bite.
             </p>
           </div>
           <div className="lg:w-1/2 flex flex-wrap justify-center gap-6">

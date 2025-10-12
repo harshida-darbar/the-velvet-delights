@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaUserCircle } from "react-icons/fa";
 
 function Profile() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "Harshida Darbar",
     email: "harshida@example.com",
@@ -31,7 +34,7 @@ function Profile() {
     data.userdetails = user;
     localStorage.setItem("the-velvet-delights", JSON.stringify(data));
     setIsEditing(false);
-    alert("Profile updated successfully!");
+    toast.info("Profile updated successfully!");
   };
 
   return (
@@ -40,11 +43,10 @@ function Profile() {
       <div className="bg-[#fdf1f0] min-h-screen flex flex-col items-center justify-center py-24 px-6 mt-8">
         <div className="bg-white shadow-lg rounded-2xl p-8 sm:p-12 w-full max-w-md text-center">
           <div className="flex flex-col items-center">
-            <img
+            {/* <img
               src="https://cdn-icons-png.flaticon.com/512/219/219970.png"
-              alt="User Avatar"
-              className="w-28 h-28 rounded-full shadow-md border-4 border-[#F2BBB6] mb-4"
-            />
+              alt="User Avatar" />*/}
+            <FaUserCircle className="w-20 h-20 rounded-full shadow-md border-4 border-[#F2BBB6] mb-4" />
             {isEditing ? (
               <input
                 type="text"
@@ -62,7 +64,10 @@ function Profile() {
 
           <div className="mt-8 text-left space-y-4">
             {["phone", "city"].map((field) => (
-              <div key={field} className="bg-[#FAF9EE] rounded-lg p-4 shadow-sm">
+              <div
+                key={field}
+                className="bg-[#FAF9EE] rounded-lg p-4 shadow-sm"
+              >
                 <p className="text-gray-700 font-semibold capitalize">
                   {field}:
                 </p>
@@ -82,37 +87,36 @@ function Profile() {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md mx-auto">
             {isEditing ? (
               <>
                 <button
                   onClick={handleSave}
-                  className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer py-3 px-6 rounded-full font-medium hover:opacity-90 transition"
+                  className="flex-1 bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer py-3 rounded-full font-medium hover:opacity-90 transition"
                 >
                   Save
                 </button>
                 <button
                   onClick={() => setIsEditing(false)}
-                  className="border-2 border-[#D9526B] text-[#D9526B] py-3 px-6 cursor-pointer rounded-full font-medium hover:bg-[#fdf1f0] transition"
+                  className="flex-1 border-2 border-[#D9526B] text-[#D9526B] py-3 rounded-full font-medium hover:bg-[#fdf1f0] transition"
                 >
                   Cancel
+                </button>
+                <button
+                  onClick={() => navigate("/orders")}
+                  className="flex-1 border-2 border-[#D9526B] text-[#D9526B] py-3 rounded-full font-medium hover:bg-[#fdf1f0] transition"
+                >
+                  View Orders
                 </button>
               </>
             ) : (
               <button
                 onClick={() => setIsEditing(true)}
-                className="bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer py-3 px-6 rounded-full font-medium hover:opacity-90 transition"
+                className="w-full bg-gradient-to-r from-[#D9526B] to-[#F2BBB6] text-white cursor-pointer py-3 rounded-full font-medium hover:opacity-90 transition"
               >
                 Edit Profile
               </button>
             )}
-
-            <button
-              onClick={() => navigate("/orders")} 
-              className="border-2 border-[#D9526B] text-[#D9526B] py-3 px-6 cursor-pointer rounded-full font-medium hover:bg-[#fdf1f0] transition"
-            >
-              View Orders
-            </button>
           </div>
         </div>
       </div>

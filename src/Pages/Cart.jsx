@@ -8,15 +8,22 @@ const Cart = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      cart: {},
+    };
     setCartItems(Object.values(data.cart || {}));
   }, []);
 
   const handleQuantityChange = (index, delta) => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      cart: {},
+    };
     const updatedItems = [...cartItems];
 
-    updatedItems[index].quantity = Math.max(1, updatedItems[index].quantity + delta);
+    updatedItems[index].quantity = Math.max(
+      1,
+      updatedItems[index].quantity + delta
+    );
     data.cart[updatedItems[index].id] = updatedItems[index];
 
     localStorage.setItem("the-velvet-delights", JSON.stringify(data));
@@ -24,7 +31,9 @@ const Cart = () => {
   };
 
   const handleRemove = (index) => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      cart: {},
+    };
     const updatedItems = [...cartItems];
     const removedItem = updatedItems[index];
 
@@ -47,7 +56,9 @@ const Cart = () => {
       <div>
         <Header />
         <div className="min-h-screen flex flex-col items-center justify-center bg-[#fdf1f0] pt-28 px-6 sm:px-12">
-          <h2 className="text-2xl font-bold text-[#D9526B] mb-4">Your cart is empty!</h2>
+          <h2 className="text-2xl font-bold text-[#D9526B] mb-4">
+            Your cart is empty!
+          </h2>
           <button
             onClick={() => navigate("/products")}
             className="bg-[#D9526B] text-white py-2 px-6 rounded-full font-medium hover:opacity-90 transition"
@@ -68,7 +79,9 @@ const Cart = () => {
     <div>
       <Header />
       <div className="bg-[#fdf1f0] min-h-screen pt-28 pb-12 px-6 sm:px-12">
-        <h2 className="text-3xl font-bold text-[#D9526B] mb-8 text-center">Your Cart</h2>
+        <h2 className="text-3xl font-bold text-[#D9526B] mb-8 text-center">
+          Your Cart
+        </h2>
 
         <div className="max-w-5xl mx-auto space-y-6">
           {cartItems.map((item, index) => (
@@ -83,9 +96,13 @@ const Cart = () => {
               />
               <div className="flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-[#D9526B]">{item.name}</h3>
+                  <h3 className="text-xl font-semibold text-[#D9526B]">
+                    {item.name}
+                  </h3>
                   <p className="text-gray-700 text-sm mt-1">{item.desc}</p>
-                  <p className="text-lg font-bold text-gray-900 mt-2">{item.price}</p>
+                  <p className="text-lg font-bold text-gray-900 mt-2">
+                    {item.price}
+                  </p>
                 </div>
 
                 <div className="flex items-center mt-4 gap-4">

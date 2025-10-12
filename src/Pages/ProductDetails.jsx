@@ -12,19 +12,27 @@ const ProductDetails = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      wishlist: {},
+      cart: {},
+    };
     setCart(Object.values(data.cart || {}));
   }, []);
 
   if (!product) {
-    return <div className="text-center mt-20 text-red-500">No product found!</div>;
+    return (
+      <div className="text-center mt-20 text-red-500">No product found!</div>
+    );
   }
 
   const { image, name, desc, price, id } = product;
   const isInCart = cart.some((i) => i.id === id);
 
   const handleCartAction = () => {
-    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || { wishlist: {}, cart: {} };
+    const data = JSON.parse(localStorage.getItem("the-velvet-delights")) || {
+      wishlist: {},
+      cart: {},
+    };
 
     if (data.cart[id]) {
       navigate("/cart");
@@ -49,7 +57,9 @@ const ProductDetails = () => {
         </div>
 
         <div className="bg-white rounded-3xl shadow-lg p-8 w-full lg:w-1/2 border border-gray-100">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#D9526B] mb-3">{name}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#D9526B] mb-3">
+            {name}
+          </h2>
           <p className="text-gray-700 text-sm sm:text-base mb-4">{desc}</p>
           <p className="text-xl font-semibold text-gray-900 mb-6">{price}</p>
 
